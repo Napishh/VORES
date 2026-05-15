@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vores Network</title>
+    <!-- Hubungkan ke file style.css kamu -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome untuk Icon Sosmed -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Glow Blobs -->
+    <div class="glow-bg-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <main class="hero-section reveal">
+        <div class="hero-container">
+            <div class="tagline-badge">MINECRAFT SERVER INDONESIA</div>
+            <h1 class="brand-title">VORES</h1>
+            <p class="brand-sub">NETWORK</p>
+            <p class="brand-desc">
+                Vores Network adalah server Survival Economy dengan nuansa vanilla yang seru dan santai. Bangun, eksplorasi, dan berkembang bersama komunitas.
+            </p>
+            
+            <div class="social">
+                <a href="https://discord.gg/QtZjWh9h53" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://chat.whatsapp.com/JTHzKLAwajwBp8Tsb9GnSp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@forestsmp_?_r=1&_t=ZS-95evpewOqjy" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/forestsmp_?igsh=djljbG8xZDJtYnhn" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <div class="action-row">
+                <a href="https://minecraft-mp.com/server/357618/vote/confirm/" target="_blank" class="btn-action">Vote Server</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Status Server Section -->
+    <section id="status" class="status-section reveal">
+        <div class="server-card">
+            <div class="card-status-bar">
+                <span class="status-indicator">STATUS SERVER</span>
+                <span class="status-online" id="server-status">CHECKING</span>
+            </div>
+            
+            <div class="card-info-box">
+                <div class="info-block">
+                    <div class="info-content">
+                        <span class="info-label">IP</span>
+                        <span class="info-value">play.voressmp.my.id</span>
+                    </div>
+                    <button class="btn-copy" onclick="navigator.clipboard.writeText('play.voressmp.my.id')">SALIN</button>
+                </div>
+
+                <div class="info-block">
+                    <div class="info-content">
+                        <span class="info-label">PORT</span>
+                        <span class="info-value">25212</span>
+                    </div>
+                    <button class="btn-copy" onclick="navigator.clipboard.writeText('25212')">SALIN</button>
+                </div>
+            </div>
+
+            <div class="card-stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">VERSI</span>
+                    <span class="stat-value">1.21+</span>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">EDISI</span>
+                    <span class="stat-value">Java & Bedrock</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Grid Fitur -->
+    <section id="fitur" class="features-section reveal">
+        <div class="section-header">
+            <h2>Fitur Server</h2>
+            <p>Berikut adalah fitur yang kami sediakan</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <h3>Shop</h3>
+                <p class="feature-desc">Tempatnya jual-beli item buat penuhin kebutuhan petualangan kamu. Bisa dapatkan uang dengan jual hasil farming di sini!</p>
+                <div class="command-group">
+                    <div class="command-box">/shop</div>
+                    <div class="command-box">/sellgui</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>Claim land</h3>
+                <p class="feature-desc">Amankan base dan bangunan kamu biar gak bisa dirusak atau dimaling sama pemain lain. Base aman, main pun tenang...</p>
+                <div class="command-group">
+                    <div class="command-box">/lands</div>
+                    <div class="command-box">/claim</div>
+                </div>
+            </div>      
+
+            <div class="feature-card reveal">
+                <h3>Auction</h3>
+                <p class="feature-desc">Mau cari barang langka atau mau jual item hasil exlpore kamu? Jual aja dengan fitur auction, kamu bisa jual apa saja dengan harga sesukamu</p>
+                <div class="command-group">
+                    <div class="command-box">/ah</div>
+                    <div class="command-box">/ah sell</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>Home</h3>
+                <p class="feature-desc">Pulang kerumah ga perlu waktu lama. Ga takut lagi kelupaan lokasi rumah atau ga bisa balik karena tersesat</p>
+                <div class="command-group">
+                    <div class="command-box">/sethome</div>
+                    <div class="command-box">/home</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>Team</h3>
+                <p class="feature-desc">Buat tim bareng temen kamu dan ajak orang lain untuk bergabung dan bekerja sama membangun base yang keren</p>
+                <div class="command-group">
+                    <div class="command-box">/team create</div>
+                    <div class="command-box">/team join</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>Teleport</h3>
+                <p class="feature-desc">Teleportasi temanmu atau player lain menjadi mudah dengan fitur tpa</p>
+                <div class="command-group">
+                    <div class="command-box">/tpa</div>
+                    <div class="command-box">/tpaccept</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>Gesture</h3>
+                <p class="feature-desc">Dengan fitur ini kamu bisa melakukan gesture seperti duduk, baring, merangkak, dan berputar</p>
+                <div class="command-group">
+                    <div class="command-box">/sit</div>
+                    <div class="command-box">/lay</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>Player warp</h3>
+                <p class="feature-desc">Buat titik lokasi publik kamu sendiri agar pemain lain bisa berkunjung. Kamu bisa gunakan untuk bikin toko custom</p>
+                <div class="command-group">
+                    <div class="command-box">/pwarp</div>
+                    <div class="command-box">/pwarp create</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>Custom enchant</h3>
+                <p class="feature-desc">Kamu bisa menemukan enchant menarik yang tidak ada di survival murni</p>
+                <div class="command-group">
+                    <div class="command-box">/ce</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>Jobs</h3>
+                <p class="feature-desc">Kamu bisa mengambil pekerjaan sesuai keinginan dan dapatkan uang tambahan dari pekerjaan</p>
+                <div class="command-group">
+                    <div class="command-box">/jobs browse</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>Grave</h3>
+                <p class="feature-desc">Saat kamu mati, kamu akan menjadi kuburan dan barangmu tidak akan berserakan, waktumu untuk mengambil barangmu kembali adalah 5 jam</p>
+                <div class="command-group">
+                    <div class="command-box">tidak ada command</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Rank Fitur -->
+    <section id="ranks" class="features-section reveal">
+        <div class="section-header">
+            <h2>Fitur Rank</h2>
+            <p>Dapatkan fitur menarik lainnya dengan membeli rank server</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <h3>VIP</h3>
+                <p class="feature-desc">Cocok untuk pemain yang ingin kenyamanan tambahan saat bermain.</p>
+                <p class="feature-desc">Mendapatkan prefix VIP dan tambahan jumlah home. Serta akses command:</p>
+                <div class="command-group">
+                    <div class="command-box">/enderchest</div>
+                    <div class="command-box">/hat</div>
+                    <div class="command-box">/craft</div>
+                    <div class="command-box">/loom</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>EPIC</h3>
+                <p class="feature-desc">Pilihan ideal untuk pemain aktif yang sering berpetualang.</p>
+                <p class="feature-desc">Mendapatkan prefix EPIC dan tambahan jumlah home. Serta akses command:</p>
+                <div class="command-group">
+                    <div class="command-box">Semua Akses VIP</div>
+                    <div class="command-box">/smithingtable</div>
+                    <div class="command-box">/stonecutter</div>
+                    <div class="command-box">/grindstone</div>
+                </div>
+            </div>      
+
+            <div class="feature-card reveal">
+                <h3>MYTHIC</h3>
+                <p class="feature-desc">Cocok untuk pemain serius yang menginginkan efisiensi maksimal.</p>
+                <p class="feature-desc">Mendapatkan prefix MYTHIC dan tambahan jumlah home. Serta akses command:</p>
+                <div class="command-group">
+                    <div class="command-box">Semua Akses EPIC</div>
+                    <div class="command-box">/repair</div>
+                    <div class="command-box">/nv</div>
+                    <div class="command-box">/anvil</div>
+                </div>
+            </div>
+
+            <div class="feature-card reveal">
+                <h3>DIVINE</h3>
+                <p class="feature-desc">Rank terbaik dengan kenyamanan, prestise, dan fitur terlengkap.</p>
+                <p class="feature-desc">Mendapatkan prefix DIVINE dan tambahan jumlah home. Serta akses command:</p>
+                <div class="command-group">
+                    <div class="command-box">Semua Akses MYTHIC</div>
+                    <div class="command-box">/fly</div>
+                    <div class="command-box">/heal</div>
+                    <div class="command-box">/day</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>VORES NETWORK</h3>
+        <p>© 2026 Vores Network. Managed by Napysh.</p>
+    </footer>
+
+    <!-- JavaScript Script -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Ambil elemen yang memiliki class .reveal
+        const semuaElemen = document.querySelectorAll(".reveal");
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Tambahkan class .active dari CSS untuk memicu animasi masuk
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        semuaElemen.forEach(el => observer.observe(el));
+
+        // Fungsi cek status API Server Minecraft
+        async function checkServer() {
+            const statusElement = document.getElementById("server-status");
+            try {
+                const response = await fetch("https://api.mcsrvstat.us/2/play.voressmp.my.id");
+                const data = await response.json();
+
+                if (data.online) {
+                    statusElement.innerText = "ONLINE";
+                    statusElement.style.color = "#00ff66";
+                    statusElement.style.borderColor = "rgba(0,255,102,.3)";
+                    statusElement.style.background = "rgba(0,255,102,.08)";
+                } else {
+                    statusElement.innerText = "OFFLINE";
+                    statusElement.style.color = "#ff4d4d";
+                    statusElement.style.borderColor = "rgba(255,77,77,.3)";
+                    statusElement.style.background = "rgba(255,77,77,.08)";
+                }
+            } catch (error) {
+                statusElement.innerText = "ERROR";
+            }
+        }
+        
+        checkServer();
+        setInterval(checkServer, 30000); // Update status setiap 30 detik
+    });
+    </script>
+</body>
+</html>
