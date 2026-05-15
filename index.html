@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vores Network</title>
-    <!-- Hubungkan ke file style.css kamu -->
     <link rel="stylesheet" href="style.css">
     
+    <meta property="og:title" content="Vores Network - Minecraft Server Indonesia" />
+    <meta property="og:description" content="Server Survival Economy 1.21+ (Java & Bedrock). Komunitas ramah, anti-grief, Jobs, Shop, dan gameplay seru. Yuk join sekarang!" />
+    <meta property="og:url" content="https://vores.my.id/" />
+    <meta property="og:image" content="https://vores.my.id/aset/logo.jpeg" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#00ff66" />
+    <meta name="description" content="Vores Network adalah server Minecraft Survival Economy Indonesia versi 1.21+. Mendukung Java & Bedrock crossplay dengan fitur Claim land, Jobs, Shop, Rank dan komunitas yang seru." />
+    <meta name="keywords" content="Vores Network, Vores SMP, Server Minecraft Indonesia, Minecraft Survival Economy, Java Bedrock" />
+
+    <link rel="icon" type="image/jpeg" href="https://vores.my.id/aset/logo.jpeg" />
+    <link rel="apple-touch-icon" href="https://vores.my.id/aset/logo.jpeg" />
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome untuk Icon Sosmed -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Background Glow Blobs -->
     <div class="glow-bg-container">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -59,9 +68,9 @@
                 <div class="info-block">
                     <div class="info-content">
                         <span class="info-label">IP</span>
-                        <span class="info-value">play.voressmp.my.id</span>
+                        <span class="info-value">play.vores.my.id</span>
                     </div>
-                    <button class="btn-copy" onclick="navigator.clipboard.writeText('play.voressmp.my.id')">SALIN</button>
+                    <button class="btn-copy" onclick="navigator.clipboard.writeText('play.vores.my.id')">SALIN</button>
                 </div>
 
                 <div class="info-block">
@@ -279,7 +288,7 @@
         async function checkServer() {
             const statusElement = document.getElementById("server-status");
             try {
-                const response = await fetch("https://api.mcsrvstat.us/2/play.voressmp.my.id");
+                const response = await fetch("https://api.mcsrvstat.us/2/play.vores.my.id");
                 const data = await response.json();
 
                 if (data.online) {
