@@ -171,7 +171,7 @@ body{
 /* BUTTON */
 
 .action-row{
-    display:flex;
+    display:inline-flex;
     justify-content:center;
 }
 
@@ -179,9 +179,10 @@ body{
     background:#00ff66;
     color:#000;
     text-decoration:none;
-    padding:15px 42px;
+    padding:15px 40px;
+    margin: 5px;
     border-radius:10px;
-    font-weight:700;
+    font-weight:600;
     transition:.25s;
 }
 

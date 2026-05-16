@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="style.css">
     
     <meta property="og:title" content="Vores Network - Minecraft Server Indonesia" />
-    <meta property="og:description" content="Vores Network adalah server Minecraft Survival Economy Indonesia versi 1.21+. Mendukung Java & Bedrock crossplay dengan fitur Claim land, Jobs, Shop, Rank dan komunitas yang seru. Yuk join sekarang!" />
+    <meta property="og:description" content="Vores Network - server Minecraft Survival Economy Indonesia versi 1.21+. Mendukung Java & Bedrock crossplay dengan fitur Claim land, Jobs, Shop, Rank dan komunitas yang seru. Yuk join sekarang!" />
     <meta property="og:url" content="https://vores.my.id/" />
     <meta property="og:image" content="https://vores.my.id/aset/logo.jpeg" />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#00ff66" />
-    <meta name="description" content="Vores Network adalah server Minecraft Survival Economy Indonesia versi 1.21+. Mendukung Java & Bedrock crossplay dengan fitur Claim land, Jobs, Shop, Rank dan komunitas yang seru." />
-    <meta name="keywords" content="Vores Network, Vores SMP, Server Minecraft Indonesia, Minecraft Survival Economy, Java Bedrock" />
+    <meta name="description" content="Vores Network - Server Minecraft Survival Economy yang Mendukung versi 1.21+ Java & Bedrock crossplay. Kami menyediakan fitur claim land, shop, auction, jobs dan rank. Yuk join sekarang dan bermain bersama player dari komunitas Vores Network." />
+    <meta name="keywords" content="Vores Network, vores network, Vores, vores, Server Minecraft Indonesia, Minecraft Survival Economy, Java Bedrock, Vores Network Minecraft Server, vores network minecraft server" />
 
-    <link rel="icon" type="image/jpeg" href="https://vores.my.id/aset/logobulat.png" />
-    <link rel="apple-touch-icon" href="https://vores.my.id/aset/logobulat.png" />
+    <link rel="icon" type="image/jpeg" href="https://vores.my.id/aset/logobulat.jpeg" />
+    <link rel="apple-touch-icon" href="https://vores.my.id/aset/logobulat.jpeg" />
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,8 @@
             <h1 class="brand-title">VORES</h1>
             <p class="brand-sub">NETWORK</p>
             <p class="brand-desc">
-                Vores Network adalah server Survival Economy dengan nuansa vanilla yang seru dan santai. Bangun, eksplorasi, dan berkembang bersama komunitas.
+                Vores Network - server Minecraft Survival Economy Indonesia versi 1.21+. 
+                Mendukung Java & Bedrock crossplay dengan fitur Claim land, Jobs, Shop, Rank dan komunitas yang seru. Yuk join sekarang!
             </p>
             
             <div class="social">
@@ -51,7 +52,8 @@
             </div>
             
             <div class="action-row">
-                <a href="https://minecraft-mp.com/server/357618/vote/confirm/" target="_blank" class="btn-action">Vote Server</a>
+                <a href="https://minecraft-mp.com/server/357618/vote/" target="_blank" class="btn-action">Vote Server</a>
+                <a href="#status" class="btn-action">Join Server</a>
             </div>
         </div>
     </main>
@@ -281,6 +283,10 @@
                 }
             });
         }, { threshold: 0.1 });
+
+        if (window.location.hash) {
+            window.location.hash = '';
+        }
 
         semuaElemen.forEach(el => observer.observe(el));
 
