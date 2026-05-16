@@ -47,19 +47,4 @@ document.addEventListener("DOMContentLoaded", function () {
     
     checkServer();
     setInterval(checkServer, 30000); // Update status setiap 30 detik
-
-    const btnJoin = document.querySelector('a[href="#status"]');
-    if (btnJoin) {
-        btnJoin.addEventListener("click", function (event) {
-            // Kita cegah tindakan default browser agar tidak merusak posisi history
-            event.preventDefault(); 
-            
-            const targetSection = document.getElementById("status");
-            if (targetSection) {
-                targetSection.scrollIntoView({ 
-                    behavior: "smooth" 
-                });
-            }
-        });
-    }
 });
