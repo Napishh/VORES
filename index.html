@@ -9,14 +9,14 @@
     <meta property="og:title" content="Vores Network - Minecraft Server" />
     <meta property="og:description" content="Vores Network - server Minecraft Survival Economy Indonesia versi 1.21+. Mendukung Java & Bedrock crossplay dengan fitur Claim land, Jobs, Shop, Rank dan komunitas yang seru. Yuk join sekarang!" />
     <meta property="og:url" content="https://vores.my.id/" />
-    <meta property="og:image" content="https://vores.my.id/aset/logo.jpeg" />
+    <meta property="og:image" content="https://vores.my.id/logo.jpeg" />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#00ff66" />
     <meta name="description" content="Vores Network - Server Minecraft Survival Economy yang Mendukung versi 1.21+ Java & Bedrock crossplay. Kami menyediakan fitur claim land, shop, auction, jobs dan rank. Yuk join sekarang dan bermain bersama player dari komunitas Vores Network." />
     <meta name="keywords" content="Vores Network, vores network, Vores, vores, Server Minecraft Indonesia, Minecraft Survival Economy, Java Bedrock, Vores Network Minecraft Server, vores network minecraft server" />
 
-    <link rel="icon" type="image/png" href="https://vores.my.id/aset/favicon.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="https://vores.my.id/aset/favicon.png" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/aset/favicon.png" sizes="48x48" />
     <link rel="apple-touch-icon" href="https://vores.my.id/aset/favicon.png" />
 
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Vores Network","alternateName":["Vores","Vores MC"],"url":"https://vores.my.id"}</script>
@@ -61,7 +61,7 @@
         </div>
     </main>
 
-    <!-- Status Server Section -->
+    <!-- status -->
     <section id="status" class="status-section reveal">
         <div class="server-card">
             <div class="card-status-bar">
@@ -101,7 +101,7 @@
         </div>
     </section>
 
-    <!-- Bagian Grid Fitur -->
+    <!-- pitur serper -->
     <section id="fitur" class="features-section reveal">
         <div class="section-header">
             <h2>Fitur Server</h2>
@@ -207,7 +207,7 @@
         </div>
     </section>
 
-    <!-- Bagian Rank Fitur -->
+    <!-- pitur rank -->
     <section id="ranks" class="features-section reveal">
         <div class="section-header">
             <h2>Fitur Rank</h2>
@@ -265,60 +265,11 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <h3>VORES NETWORK</h3>
         <p>© 2026 Vores Network. Managed by Napysh.</p>
     </footer>
 
-    <!-- JavaScript Script -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Ambil elemen yang memiliki class .reveal
-        const semuaElemen = document.querySelectorAll(".reveal");
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Tambahkan class .active dari CSS untuk memicu animasi masuk
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        if (window.location.hash) {
-            window.location.hash = '';
-        }
-
-        semuaElemen.forEach(el => observer.observe(el));
-
-        // Fungsi cek status API Server Minecraft
-        async function checkServer() {
-            const statusElement = document.getElementById("server-status");
-            try {
-                const response = await fetch("https://api.mcsrvstat.us/2/play.vores.my.id");
-                const data = await response.json();
-
-                if (data.online) {
-                    statusElement.innerText = "ONLINE";
-                    statusElement.style.color = "#00ff66";
-                    statusElement.style.borderColor = "rgba(0,255,102,.3)";
-                    statusElement.style.background = "rgba(0,255,102,.08)";
-                } else {
-                    statusElement.innerText = "OFFLINE";
-                    statusElement.style.color = "#ff4d4d";
-                    statusElement.style.borderColor = "rgba(255,77,77,.3)";
-                    statusElement.style.background = "rgba(255,77,77,.08)";
-                }
-            } catch (error) {
-                statusElement.innerText = "ERROR";
-            }
-        }
-        
-        checkServer();
-        setInterval(checkServer, 30000); // Update status setiap 30 detik
-    });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
