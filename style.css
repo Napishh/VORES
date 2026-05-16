@@ -159,7 +159,6 @@ body{
     justify-content:center;
     font-size:22px;
     text-decoration:none;
-    box-shadow:0 0 25px rgba(0,255,102,.45);
     transition:.25s;
 }
 
@@ -179,10 +178,10 @@ body{
     background:#00ff66;
     color:#000;
     text-decoration:none;
-    padding:15px 40px;
+    padding:15px 28px;
     margin: 5px;
     border-radius:10px;
-    font-weight:600;
+    font-weight:700;
     transition:.25s;
 }
 
