@@ -27,8 +27,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <script>
+
+    history.scrollRestoration = "manual";
+
+            window.onload = () => {
+        window.scrollTo(0, 0);
+        };
+
+    </script>
 </head>
 <body>
+    <nav class="navbar">
+
+    <div class="nav-left">
+
+        <img src="favicon.png" alt="Vores Logo" class="nav-logo">
+
+        <div class="nav-brand">
+            <span class="nav-title">VORES</span>
+            <span class="nav-subtitle">NETWORK</span>
+        </div>
+
+    </div>
+
+    <div class="nav-links" id="nav-links">
+
+        <a href="#">Home</a>
+        <a href="#status">Status</a>
+        <a href="#rules">Rules</a>
+        <a href="#fitur">Fitur</a>
+        <a href="#ranks">Rank</a>
+
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    </nav>
 
     <div class="glow-bg-container">
         <div class="blob blob-1"></div>
@@ -61,6 +101,23 @@
         </div>
     </main>
 
+    <!-- galery -->
+    <section class="hero-gallery">
+
+        <div class="gallery-track">
+            <img src="assets/galery 1.png" alt="">
+            <img src="assets/galery 2.png" alt="">
+            <img src="assets/galery 3.png" alt="">
+            <img src="assets/galery 4.png" alt="">
+
+            <img src="assets/galery 1.png" alt="">
+            <img src="assets/galery 2.png" alt="">
+            <img src="gallery3.jpg" alt="">
+            <img src="assets/galery 4.png" alt="">
+        </div>
+
+    </section>
+
     <!-- status -->
     <section id="status" class="status-section reveal">
         <div class="server-card">
@@ -75,7 +132,7 @@
                         <span class="info-label">IP</span>
                         <span class="info-value">play.vores.my.id</span>
                     </div>
-                    <button class="btn-copy" onclick="navigator.clipboard.writeText('play.vores.my.id')">SALIN</button>
+                    <button class="btn-copy" onclick="copyText('play.vores.my.id')">SALIN</button>
                 </div>
 
                 <div class="info-block">
@@ -83,7 +140,7 @@
                         <span class="info-label">PORT</span>
                         <span class="info-value">25212</span>
                     </div>
-                    <button class="btn-copy" onclick="navigator.clipboard.writeText('25212')">SALIN</button>
+                    <button class="btn-copy" onclick="copyText('25212')">SALIN</button>
                 </div>
             </div>
 
@@ -100,6 +157,129 @@
             </div>
         </div>
     </section>
+
+    <!-- rules -->
+     <section class="rules-section reveal" id="rules">
+
+    <div class="section-header">
+        <h2>Rules</h2>
+        <p>Pastikan kamu membaca semua peraturan sebelum bermain</p>
+    </div>
+
+    <div class="rules-accordion">
+
+        <!-- gameplay -->
+
+        <div class="rule-item">
+
+    <button class="rule-btn">
+
+        <span>🎮 Gameplay Rules</span>
+        <i class="fas fa-plus"></i>
+
+    </button>
+
+    <div class="rule-content">
+
+        <p>• Dilarang menggunakan cheat, hack, client ilegal, exploit, atau bug abuse</p>
+        <p>• Dilarang menggunakan xray, autoclicker, killaura, reach, fly, dan sejenisnya</p>
+        <p>• Dilarang dupe item atau abuse economy server</p>
+        <p>• Dilarang grief area player tanpa izin</p>
+        <p>• Dilarang trap kill berlebihan yang merugikan server</p>
+        <p>• Dilarang sengaja membuat lag server</p>
+        <p>• Dilarang abuse fitur, plugin, atau command server</p>
+        <p>• Scam antar player tidak diperbolehkan</p>
+
+    </div>
+
+    </div>
+
+    <!-- Chat Ingame -->
+
+        <div class="rule-item">
+
+    <button class="rule-btn">
+
+        <span>💬 Chat Ingame Rules</span>
+        <i class="fas fa-plus"></i>
+
+    </button>
+
+    <div class="rule-content">
+
+        <p>• Dilarang toxic berlebihan</p>
+        <p>• Dilarang spam, flood, atau caps berlebihan</p>
+        <p>• Dilarang promosi server lain</p>
+        <p>• Dilarang berkata SARA, pornografi, atau penghinaan</p>
+
+    </div>
+
+    </div>
+
+    <!-- Build -->
+
+        <div class="rule-item">
+
+    <button class="rule-btn">
+
+        <span>🏗️ Build Rules</span>
+        <i class="fas fa-plus"></i>
+
+    </button>
+
+    <div class="rule-content">
+
+        <p>• Build ofensif atau tidak pantas dilarang</p>
+        <p>• Redstone/farm berlebihan yang menyebabkan lag akan ditindak</p>
+        <p>• Jangan membuat struktur yang mengganggu area publik/server</p>
+
+    </div>
+
+    </div>
+
+    <!-- STAFF -->
+
+        <div class="rule-item">
+
+    <button class="rule-btn">
+
+        <span>👑 Staff</span>
+        <i class="fas fa-plus"></i>
+
+    </button>
+
+    <div class="rule-content">
+
+        <p>• Hormati keputusan staff</p>
+        <p>• Jangan menghambat tugas staff</p>
+        <p>• Laporkan ke staff jika menemukan pelanggaran atau bug </p>
+
+    </div>
+
+    </div>
+
+    <!-- HUKUMAN -->
+
+        <div class="rule-item">
+
+    <button class="rule-btn">
+
+        <span>🔨 Hukuman</span>
+        <i class="fas fa-plus"></i>
+
+    </button>
+
+    <div class="rule-content">
+
+        <p>• Warn → Mute → Tempban → Permanent Ban</p>
+        <p>• Punishment diberikan sesuai tingkat pelanggaran dan keputusan staff</p>
+        <p>• Staff berhak memutuskan punishment</p>
+
+    </div>
+
+    </div>
+
+</section>
 
     <!-- pitur serper -->
     <section id="fitur" class="features-section reveal langsung">
@@ -201,7 +381,7 @@
                 <h3>Grave</h3>
                 <p class="feature-desc">Saat kamu mati, kamu akan menjadi kuburan dan barangmu tidak akan berserakan, waktumu untuk mengambil barangmu kembali adalah 5 jam</p>
                 <div class="command-group">
-                    <div class="command-box">tidak ada command</div>
+                    <div class="command-box">/back</div>
                 </div>
             </div>
         </div>
@@ -253,7 +433,7 @@
 
             <div class="feature-card reveal">
                 <h3>DIVINE</h3>
-                <p class="feature-desc">Rank terbaik dengan kenyamanan, prestise, dan fitur terlengkap.</p>
+                <p class="feature-desc">Rank terbaik dengan kenyamanan dan fitur terlengkap.</p>
                 <p class="feature-desc">Mendapatkan prefix DIVINE dan tambahan jumlah home. Serta akses command:</p>
                 <div class="command-group">
                     <div class="command-box">Semua Akses MYTHIC</div>
@@ -265,9 +445,13 @@
         </div>
     </section>
 
+    <div class="toast" id="toast">
+        Berhasil disalin
+    </div>
+
     <footer class="footer">
         <h3>VORES NETWORK</h3>
-        <p>© 2026 Vores Network. Managed by Napysh.</p>
+        <p>© 2026 Vores Network.</p>
     </footer>
 
     <script src="script.js"></script>

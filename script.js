@@ -53,3 +53,94 @@ document.addEventListener("DOMContentLoaded", function () {
         checkServer();
         setInterval(checkServer, 30000); // Update status setiap 30 detik
     });
+
+        const menuToggle =
+            document.getElementById("menu-toggle");
+
+        const navLinks =
+            document.getElementById("nav-links");
+
+            menuToggle.addEventListener("click", () => {
+
+            menuToggle.classList.toggle("active");
+            navLinks.classList.toggle("active");
+
+    });
+
+        function copyText(text){
+
+            navigator.clipboard.writeText(text);
+
+        const toast =
+            document.getElementById("toast");
+
+             toast.classList.add("show");
+
+          setTimeout(() => {
+             toast.classList.remove("show");
+    }, 2200);
+
+}
+
+        /* ACTIVE NAVBAR */
+
+        const sections =
+            document.querySelectorAll("section");
+
+        const navLinksAll =
+            document.querySelectorAll(".nav-links a");
+
+            window.addEventListener("scroll", () => {
+
+                let current = "";
+
+                sections.forEach(section => {
+
+        const sectionTop =
+                section.offsetTop - 140;
+
+                if(scrollY >= sectionTop){
+                    current =
+                    section.getAttribute("id");
+                }
+
+            });
+
+            navLinksAll.forEach(link => {
+
+                link.classList.remove("active");
+
+                if(
+                    link.getAttribute("href")
+                    === `#${current}`
+                ){
+                    link.classList.add("active");
+                }
+
+            });
+
+        });
+
+        const ruleItems =
+            document.querySelectorAll(".rule-item");
+
+            ruleItems.forEach(item => {
+
+        const btn =
+            item.querySelector(".rule-btn");
+
+            btn.addEventListener("click", () => {
+
+                ruleItems.forEach(other => {
+
+                if(other !== item){
+                    other.classList.remove("active");
+                    }
+
+                });
+
+            item.classList.toggle("active");
+
+            });
+
+        });
