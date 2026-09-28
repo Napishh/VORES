@@ -27,28 +27,51 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-        // Fungsi cek status API Server Minecraft
-        async function checkServer() {
-            const statusElement = document.getElementById("server-status");
-            try {
-                const response = await fetch("https://api.mcsrvstat.us/2/play.vores.my.id");
-                const data = await response.json();
+// Fungsi cek status API Server Minecraft
+async function checkServer() {
+    const statusElement = document.getElementById("server-status");
+    try {
+        const response = await fetch("https://api.mcsrvstat.us/2/play.vores.my.id");
+        const data = await response.json();
 
-                if (data.online) {
-                    statusElement.innerText = "ONLINE";
-                    statusElement.style.color = "#00ff66";
-                    statusElement.style.borderColor = "rgba(0,255,102,.3)";
-                    statusElement.style.background = "rgba(0,255,102,.08)";
-                } else {
-                    statusElement.innerText = "OFFLINE";
-                    statusElement.style.color = "#ff4d4d";
-                    statusElement.style.borderColor = "rgba(255,77,77,.3)";
-                    statusElement.style.background = "rgba(255,77,77,.08)";
-                }
-            } catch (error) {
-                statusElement.innerText = "ERROR";
+        // 1. Cek apakah API mendeteksi server menyala
+        if (data.online) {
+            
+            // Menggabungkan semua baris MOTD menjadi satu teks huruf kecil untuk pengecekan
+            const motdText = data.motd && data.motd.clean 
+                ? data.motd.clean.join(" ").toLowerCase() 
+                : "";
+
+            // Cek apakah ada kata "maintenance" atau "perbaikan" di MOTD server Anda
+            if (motdText.includes("maintenance") || motdText.includes("perbaikan")) {
+                statusElement.innerText = "MAINTENANCE";
+                statusElement.style.color = "#ffaa00"; // Warna Oranye
+                statusElement.style.borderColor = "rgba(255,170,0,.3)";
+                statusElement.style.background = "rgba(255,170,0,.08)";
+            } else {
+                // Status jika server online normal
+                statusElement.innerText = "ONLINE";
+                statusElement.style.color = "#00ff66"; // Warna Hijau
+                statusElement.style.borderColor = "rgba(0,255,102,.3)";
+                statusElement.style.background = "rgba(0,255,102,.08)";
             }
+
+        } else {
+            // Status jika server offline total
+            statusElement.innerText = "OFFLINE";
+            statusElement.style.color = "#ff4d4d"; // Warna Merah
+            statusElement.style.borderColor = "rgba(255,77,77,.3)";
+            statusElement.style.background = "rgba(255,77,77,.08)";
         }
+    } catch (error) {
+        statusElement.innerText = "ERROR";
+        statusElement.style.color = "#ffffff";
+        statusElement.style.borderColor = "rgba(255,255,255,.3)";
+        statusElement.style.background = "rgba(255,255,255,.08)";
+    }
+}
+
+        
         
         checkServer();
         setInterval(checkServer, 30000); // Update status setiap 30 detik
